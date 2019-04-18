@@ -1,0 +1,182 @@
+<!--
+Author: Jessica Thompson
+Date: 03/03/2019
+Purpose: Trivia to practice forms and validation
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Assignment Four - Trivia</title>
+        <script src="trivProcess.js"></script>
+        <link href="Css/bootstrap.css" rel="stylesheet">
+        <link href="Css/myStylesheet.css" rel="stylesheet">
+    </head>
+    <body>
+
+        <div id="container">
+            <h2 class="title">Bahamas Trivia</h2>
+            <form>
+                <div class="alertIncompleteField" id="incompleteForm" style="display: none"><p>Please fill out form!</p>
+                </div>
+
+                <!--Two text boxes-->
+                <h4>Question 1</h4>
+                <label for="question1">What is the capital of the Bahamas?</label><br>
+                <input class="textBox" type="text" id="question1"/><br>
+                <div class="alertIncompleteField" id="incompleteQ1" style="display: none"><p>Please enter an
+                    answer!</p></div>
+                <br>
+
+                <h4>Question 2</h4>
+                <label for="question2">True or False - The Bahamas was formerly a British colony.</label><br>
+                <input class="textBox" type="text" id="question2"/><br>
+                <div class="alertIncompleteField" id="incompleteQ2" style="display: none"><p>Please enter "true" or
+                    "false"!</p>
+                </div>
+                <br>
+
+
+                <!--Two Drop downs-->
+                <h4>Question 3</h4>
+                <label for="question3">The Bahamas is made up of _____ Islands and Cays</label>
+                <select id="question3" class="form-control">
+                    <option value="defaultSelect" class="defaultSelect">Please Select...</option>
+                    <option value="26">26</option>
+                    <option value="700">700</option>
+                    <option value="439">439</option>
+                    <option value="12">12</option>
+                </select>
+                <div class="alertIncompleteField" id="incompleteQ3" style="display: none"><p>Please choose a valid
+                    answer!</p>
+                </div>
+                <br>
+
+
+                <h4>Question 4</h4>
+                <label for="question4">The national bird of the Bahamas is the __________ </label>
+                <select id="question4" class="form-control">
+                    <option value="defaultSelect" class="defaultSelect">Please Select...</option>
+                    <option value="osprey">Osprey</option>
+                    <option value="great egret">Great Egret</option>
+                    <option value="pigeon">Pigeon</option>
+                    <option value="flamingo">Flamingo</option>
+                </select>
+                <div class="alertIncompleteField" id="incompleteQ4" style="display: none"><p>Please choose a valid
+                    answer!</p>
+                </div>
+                <br>
+
+
+                <!--Two Multiple choice-->
+                <h4>Question 5</h4>
+                <p><span class="heading">The Bahamian Flags colors are: </span></p>
+                <div id="question5" class="radio">
+                    <label>
+                        <input name="question5" class="radio" value="aquamarine, gold and black" type="radio">Aquamarine,
+                        Gold
+                        and Black
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input name="question5" class="radio" value="blue, yellow and red" type="radio">Blue, Yellow and
+                        Red
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input name="question5" class="radio" value="green, red and black" type="radio">Green, Red and
+                        Black
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input name="question5" class="radio" value="red, white and blue" type="radio">Red, White and
+                        Blue
+                    </label>
+                </div>
+                <div class="alertIncompleteField" id="incompleteQ5" style="display: none"><p>Please choose a valid
+                    answer!</p>
+                </div>
+                <br>
+
+
+                <h4>Question 6</h4>
+                <p><span class="heading">What is the official language of the Bahamas?</span></p>
+                <div id="question6" class="radio">
+                    <label>
+                        <input id="defaultSelect6" name="question6" class="radio" value="french" type="radio">French
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input name="question6" class="radio" value="creole" type="radio">Creole
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input name="question6" class="radio" value="english" type="radio">English
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input name="question6" class="radio" value="spanish" type="radio">Spanish
+                    </label>
+                </div>
+                <div class="alertIncompleteField" id="incompleteQ6" style="display: none"><p>Please choose a valid
+                    answer!</p>
+                </div>
+                <br>
+
+
+                <!--Checkbox question-->
+                <h4>Question 7</h4>
+                <p><span class="heading">A potcake is a what? (select all that apply)</span></p>
+                <div id="question7" class="checkbox">
+                    <label>
+                        <input value="a hole in the road" name="question7" type="checkbox">A hole in the road
+                    </label>
+                    <br>
+                    <label>
+                        <input value="a breed of dog" name="question7" type="checkbox">A breed of dog
+                    </label>
+                    <br>
+                    <label>
+                        <input value="burned rice that sticks to the bottom of the pot" name="question7"
+                               type="checkbox">Burned
+                        rice that sticks to the bottom of the pot
+                    </label>
+                    <br>
+                    <label>
+                        <input value="None of the above" name="question7" type="checkbox">None of the above
+                    </label>
+                </div>
+                <div class="alertIncompleteField" id="incompleteQ7" style="display: none"><p>Please choose a valid
+                    answer!</p>
+                </div>
+                <br>
+
+                <button type="button" id="submitAnswers">Submit Answers</button>
+                <br>
+                <div id="results" style="display: none">
+                    <h3>Results</h3>
+                    <div id="correctAnswers">
+                        <ol>
+                            <li id="q1Results"></li>
+                            <li id="q2Results"></li>
+                            <li id="q3Results"></li>
+                            <li id="q4Results"></li>
+                            <li id="q5Results"></li>
+                            <li id="q6Results"></li>
+                            <li id="q7Results"></li>
+                        </ol>
+                    </div>
+                    <div id="totalScore" class="greenFont"></div>
+                </div>
+                <button type="button" id="resetBtn">Reset form</button>
+            </form>
+        </div>
+    </body>
+</html>
