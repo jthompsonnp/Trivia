@@ -1,0 +1,105 @@
+$background: darkslategrey
+$yellow-font: #ffc72c
+$blue-font: #00778b
+
+
+body
+  background-color: $background
+
+.defaultSelect
+  color: grey
+
+
+.heading
+  font-weight: bold
+
+//Nesting
+div
+  h2
+    letter-spacing: 5px
+    font-weight: bold
+    text-align: center
+
+//Adjusting the width of the dropdown menus
+.form-control
+  width: 300px
+
+#container
+  border: 1px solid green
+  padding: 5px
+  margin: 10px auto
+  background-color: darkgray
+  color: black
+  width: 800px
+
+
+//using extends and inheritance
+%indent-answer-fields
+  margin-top: 10px
+  margin-left: 20px
+
+.radio
+  @extend %indent-answer-fields
+
+.checkbox
+  @extend %indent-answer-fields
+
+.form-control
+  @extend %indent-answer-fields
+
+.textBox
+  @extend %indent-answer-fields
+
+
+//styling results
+#results
+  background-color: $blue-font
+  margin: 10px
+  padding: 10px
+  color: $yellow-font
+  border: 2px solid black
+
+
+#correctAnswers
+  color: $yellow-font
+
+
+.alertIncompleteField
+  color: red
+  font-weight: bold
+
+
+//using extends and inheritance
+%button-styling
+  width: 150px
+  height: 30px
+
+#submitAnswers
+  @extend %button-styling
+
+#resetBtn
+  @extend %button-styling
+
+
+//using extends and inheritance
+%score-styling
+  background: rgba(0, 0, 0, 0.5)
+  width: 25%
+  margin: auto
+  font-size: large
+  padding: 5px
+
+
+.greenFont
+  @extend %score-styling
+  color: green
+
+
+.orangeFont
+  @extend %score-styling
+  color: orange
+
+
+.redFont
+  @extend %score-styling
+  color: red

@@ -1,0 +1,79 @@
+body {
+  background-color: darkslategrey;
+}
+
+.defaultSelect {
+  color: grey;
+}
+
+.heading {
+  font-weight: bold;
+}
+
+div h2 {
+  letter-spacing: 5px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.form-control {
+  width: 300px;
+}
+
+#container {
+  border: 1px solid green;
+  padding: 5px;
+  margin: 10px auto;
+  background-color: darkgray;
+  color: black;
+  width: 800px;
+}
+
+.textBox, .form-control, .checkbox, .radio {
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+#results {
+  background-color: #00778b;
+  margin: 10px;
+  padding: 10px;
+  color: #ffc72c;
+  border: 2px solid black;
+}
+
+#correctAnswers {
+  color: #ffc72c;
+}
+
+.alertIncompleteField {
+  color: red;
+  font-weight: bold;
+}
+
+#resetBtn, #submitAnswers {
+  width: 150px;
+  height: 30px;
+}
+
+.redFont, .orangeFont, .greenFont {
+  background: rgba(0, 0, 0, 0.5);
+  width: 25%;
+  margin: auto;
+  font-size: large;
+  padding: 5px;
+}
+
+.greenFont {
+  color: green;
+}
+
+.orangeFont {
+  color: orange;
+}
+
+.redFont {
+  color: red;
+}
+
+/*# sourceMappingURL=mySassConverted.css.map */
